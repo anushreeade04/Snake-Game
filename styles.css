@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .play-board {
+    background-color: #222;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.settings {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-board {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: repeat(30, 1fr);
+    grid-template-columns: repeat(30, 1fr);
+    background-color: #212121;
+    border: 5px solid #2b19f4;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.food {
+    background-color: red;
+    border-radius: 50%;
+}
+
+.head {
+    border-radius: 5px;
+}
+
+#pauseResume {
+    background: #0288d1;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pauseResume:hover {
+    background: #01579b;
+}
+
+.leaderboard {
+    margin-top: 20px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.leaderboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.leaderboard li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
