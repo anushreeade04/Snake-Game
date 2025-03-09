@@ -89,7 +89,12 @@ h1 {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Keep it positioned separately */
+    top: 10px; /* Adjust top margin */
+    right: 10px; /* Keep it to the right */
+    z-index: 100; /* Ensure it stays above */
 }
+
 
 .leaderboard ul {
     list-style: none;
@@ -103,20 +108,21 @@ h1 {
 
 .mobile-controls {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px; /* Keep it slightly above the bottom */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 99; /* Ensure it's below the leaderboard */
 }
 
 .mobile-controls button {
-    background: #333;
+    background: #007BFF;
     color: white;
     border: none;
-    font-size: 20px;
-    padding: 15px;
+    font-size: 16px;
+    padding: 10px 15px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
