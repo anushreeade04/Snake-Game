@@ -1,7 +1,11 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 /* Dark mode styles */
@@ -37,6 +41,7 @@ h1 {
     margin-top: 20px;
 }
 
+/* Game Settings Box */
 .settings {
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
@@ -44,8 +49,11 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+/* Game Board */
 .play-board {
     width: 400px;
     height: 400px;
@@ -59,6 +67,7 @@ h1 {
     position: relative;
 }
 
+/* Food & Snake */
 .food {
     background-color: red;
     border-radius: 50%;
@@ -68,6 +77,7 @@ h1 {
     border-radius: 5px;
 }
 
+/* Pause Button */
 #pauseResume {
     background: #0288d1;
     color: white;
@@ -82,19 +92,18 @@ h1 {
     background: #01579b;
 }
 
+/* Leaderboard - Fixed on Desktop, Responsive on Mobile */
 .leaderboard {
-    margin-top: 20px;
     width: 250px;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    position: absolute; /* Keep it positioned separately */
-    top: 10px; /* Adjust top margin */
-    right: 10px; /* Keep it to the right */
-    z-index: 100; /* Ensure it stays above */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
 }
-
 
 .leaderboard ul {
     list-style: none;
@@ -106,17 +115,19 @@ h1 {
     border-bottom: 1px solid #ddd;
 }
 
+/* Mobile Controls */
 .mobile-controls {
     position: fixed;
-    bottom: 20px; /* Keep it slightly above the bottom */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 99; /* Ensure it's below the leaderboard */
+    z-index: 99;
 }
 
+/* Mobile Controls Buttons */
 .mobile-controls button {
     background: #007BFF;
     color: white;
@@ -128,7 +139,30 @@ h1 {
     cursor: pointer;
 }
 
-.mobile-controls div {
-    display: flex;
-    justify-content: center;
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .play-board {
+        width: 300px;
+        height: 300px;
+        grid-template-rows: repeat(20, 1fr);
+        grid-template-columns: repeat(20, 1fr);
+    }
+
+    .leaderboard {
+        width: 90%;
+        position: relative;
+        margin: 10px auto;
+        right: auto;
+        top: auto;
+    }
+
+    .mobile-controls {
+        bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+    .mobile-controls button {
+        width: 45%;
+        font-size: 14px;
+    }
 }
