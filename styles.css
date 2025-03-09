@@ -118,18 +118,7 @@ h1 {
 /* Mobile Controls */
 .mobile-controls {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 99;
-}
-
-.mobile-controls {
-    position: fixed;
-    bottom: 10px;
+    bottom: 20px; /* Ensure it stays at the bottom */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -138,38 +127,26 @@ h1 {
     z-index: 10; /* Ensure it's above other elements */
 }
 
-/* Ensure leaderboard is properly spaced */
+/* Ensure leaderboard has proper spacing */
 .leaderboard {
     width: 90%;
     max-width: 350px; /* Prevents it from being too wide */
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
-    margin: 20px auto; /* Adds space between the game and leaderboard */
+    margin-bottom: 80px; /* Adds space between the leaderboard and mobile controls */
     z-index: 1;
 }
 
-/* Adjust the list styling */
-.leaderboard ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.leaderboard li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Ensure buttons in mobile controls are properly spaced */
+/* Adjust button sizes and spacing */
 .mobile-controls button {
     background: #007BFF;
     color: white;
     border: none;
     font-size: 16px;
-    padding: 10px 15px;
+    padding: 12px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
@@ -187,6 +164,7 @@ h1 {
 
     .leaderboard {
         width: 95%;
+        margin-bottom: 120px; /* More spacing to avoid overlap */
     }
 
     .mobile-controls {
@@ -195,7 +173,8 @@ h1 {
     }
 
     .mobile-controls button {
-        width: 22%;
+        width: 50px;
+        height: 50px;
         font-size: 14px;
         padding: 8px;
     }
